@@ -1,4 +1,5 @@
 import React from 'react';
+import '../index.css';
 import {
   BrowserRouter,
   Route,
@@ -9,8 +10,6 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 import PrivateRoute from './PrivateRoute';
 import Register from './Register';
-
-import '../index.css';
 
 class App extends React.Component {
   render() {

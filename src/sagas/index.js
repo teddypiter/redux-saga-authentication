@@ -28,10 +28,7 @@ function* loginSaga(payload) {
 }
 
 function* registerUserService (request){
- 
-  //const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';
-  //const jsonVal = yield call([response,response.json]);  
-  
+
   const REGISTER_API_ENDPOINT = 'http://192.168.2.46:8090/v1/auth/register';
   const parameters = {
     method: 'POST',
@@ -52,14 +49,6 @@ function* registerUserService (request){
     console.log("Exception", ex.response);
     throw ex;
   } 
-
-  // return fetch(REGISTER_API_ENDPOINT, {})
-  //   .then(response => {
-  //     return response.json();
-  //   })
-  //   .then(json => {
-  //     return json;
-  //   });
 };
 
 function* loginUserService (request){
