@@ -1,20 +1,10 @@
-import * as types from '../actions/index';
+import { combineReducers } from "redux";
+import register from "./register";
+import login from "./login";
 
-const reducer = (state = [], action) => {
-     const response = action.response;
+const rootReducer = combineReducers({
+  register,
+  login
+});
 
-     switch (action.type) {
-          case types.LOGIN_USER_SUCCESS:
-               return { ...state, response };
-          case types.LOGIN_USER_ERROR:
-               return { ...state, response };  
-          case types.REGISTER_USER_SUCCESS:
-               return { ...state, response };
-          case types.REGISTER_USER_ERROR:
-               return { ...state, response };   
-          default: 
-               return state;
-     }
- };
- export default reducer;
-
+export default rootReducer;
